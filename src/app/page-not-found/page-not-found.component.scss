@@ -1,0 +1,14 @@
+.flex-center {
+    position: relative;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .content {
+        text-align: center;
+        
+        h1 { font-weight: 300; }
+        // a { color: #FFF176; }
+    }
+}

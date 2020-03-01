@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <!-- Input Text -->
+      <div class="trans-card">
+        <mat-tab-group mat-stretch-tabs [selectedIndex]="inputIndex" (selectedTabChange)="inputSwitch($event.index)">
+          <mat-tab label="LOTIN"></mat-tab>
+          <mat-tab label="KIRILL"></mat-tab>
+        </mat-tab-group>
+
+        <div class="card-content">
+          hello!
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6">
+      <!-- Output Text -->
+      <div class="trans-card">
+        <mat-tab-group mat-stretch-tabs [selectedIndex]="outputIndex" (selectedTabChange)="outputIndex = $event.index">
+          <mat-tab label="LOTIN"></mat-tab>
+          <mat-tab label="KIRILL"></mat-tab>
+        </mat-tab-group>
+
+        <div class="card-content">
+          world!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>Input: {{ inputIndex }}</p>
+  <p>Output: {{ outputIndex }}</p>
+</div>

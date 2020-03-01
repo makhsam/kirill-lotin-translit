@@ -1,1 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: '"Open Sans", sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 400)
+);
+
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
+
+html, body {
+    height: 100%; 
+}
+body { 
+    margin: 0; 
+    font-family: "Open Sans", sans-serif; 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/**
+ * Bootstrap 4.3.1
+ */
+ .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  // Greater than 576px
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+
+/** 
+ * SOME GRID CLASSES 
+ */
+ .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-lg-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: 992px) {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+
+/**
+ * SOME SPACING CLASSES
+ */
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+
+/* Angular Material Design Overriding */
+.mat-tab-label-content {
+  font-weight: 600;
+}
+
+.mat-tab-label.mat-tab-label-active {
+  opacity: 1;
+  outline: 0;
+  color: #3f51b5;
+}
